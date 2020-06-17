@@ -1,0 +1,35 @@
+@import "config";
+@import "menu";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 1rem 2rem 5rem 2rem;
+  background: $primary-color;
+}
+
+header {
+  padding: 1rem 0 2rem 0;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  align-items: center;
+
+  h3 {
+    grid-column: 2/3;
+  }
+
+  div.menu-btn {
+    justify-self: end;
+    align-self: center;
+  }
+}
+
+.works {
+  img {
+    width: 100%;
+  }
+}

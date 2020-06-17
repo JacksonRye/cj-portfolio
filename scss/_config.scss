@@ -1,0 +1,8 @@
+$primary-color: #fcfcfc;
+$text-color: #000;
+$accent-color: rgb(69, 86, 243);
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
