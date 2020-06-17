@@ -8,8 +8,13 @@
 
 body {
   height: 100%;
-  margin: 1rem 2rem 5rem 2rem;
+  margin: 0 2rem 5rem 2rem;
   background: $primary-color;
+
+  h2 {
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
 }
 
 header {
@@ -17,6 +22,11 @@ header {
   display: grid;
   grid-template-columns: 5% 1fr 1fr 5%;
   align-items: center;
+  position: fixed;
+  z-index: 3;
+  width: 100%;
+  background: $primary-color;
+  transform: translateX(-5%);
 
   h3 {
     grid-column: 2/3;
@@ -28,8 +38,98 @@ header {
   }
 }
 
+.cta {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
 .works {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  column-gap: 1rem;
   img {
     width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+section {
+  padding-top: 7rem;
+
+  h3 {
+    margin: 2rem 0;
+  }
+}
+
+.about {
+  .me {
+    p {
+      font-weight: 500;
+      font-size: 2rem;
+    }
+    padding-bottom: 4rem;
+  }
+
+  .history {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+
+    .studies,
+    .experience {
+      flex: grow;
+
+      .time {
+        list-style: none;
+
+        .date {
+          font-weight: 700;
+          font-size: 1.1rem;
+          margin-bottom: 0.3rem;
+        }
+
+        .position {
+          opacity: 0.5;
+          padding-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.contact {
+  .social-links {
+    display: flex;
+    justify-content: start;
+
+    a {
+      text-decoration: none;
+      background: darken($primary-color, 3);
+      color: $text-color;
+      padding: 0.8rem 1.5rem;
+      border-radius: 30%;
+    }
+  }
+}
+
+.rotating {
+  z-index: 10;
+  position: fixed;
+  bottom: 2%;
+  right: 5%;
+
+  svg {
+    animation: rotation 3s infinite linear;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
   }
 }
