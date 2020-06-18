@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
     <title>Home</title>
 </head>
 
@@ -25,48 +29,68 @@
             </div>
             <ul class="menu-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Work</a>
+                    <a href="#work" class="nav-link">Work</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">About</a>
+                    <a href="#about" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="cta">
+        <section class="cta" id="home">
             <h1>Hey! I'm Chijioke, a Nigerian Based UX UI Designer, Front-End Developer & Programmer</h1>
             </div>
 
-            <section class="my-works">
+            <section id="work" class="my-works">
                 <h3>Selected Work</h3>
 
                 <div class="works">
                     <div class="work work1">
                         <img src="./img/img1.jpg" alt="">
+                        <div class="info" data-aos="fade-up">
+                            <h6 class="work-tag">Desktop App</h6>
+                            <h3 class="work-name">Empire Stock</h3>
+                        </div>
+
                     </div>
                     <div class="work work2">
                         <img src="./img/img2.jpg" alt="">
+                        <div class="info" data-aos="fade-up">
+                            <h6 class="work-tag">Programming</h6>
+                            <h3 class="work-name">Coding Project</h3>
+                        </div>
+
                     </div>
-                    <div class="work work1">
+                    <div class="work work3">
                         <img src="./img/img3.jpg" alt="">
+                        <div class="info" data-aos="fade-up">
+                            <h6 class="work-tag">Mobile</h6>
+                            <h3 class="work-name">Mascot</h3>
+                        </div>
+
                     </div>
-                    <div class="work work1">
+                    <div class="work work4">
                         <img src="./img/img5.jpg" alt="">
+                        <div class="info" data-aos="fade-up">
+                            <h6 class="work-tag">Collaboration</h6>
+                            <h3 class="work-name">Round</h3>
+                        </div>
+
                     </div>
                 </div>
             </section>
 
 
-            <section class="about">
-                <div class="me">
+            <section id="about" class="about" >
+                <div class="me" data-aos="fade-up">
                     <h3>About Me</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis a laborum voluptatem molestiae
                         porro
@@ -75,7 +99,7 @@
                 </div>
 
                 <div class="history">
-                    <div class="studies">
+                    <div class="studies" data-aos="fade-up">
                         <h2>Studies</h2>
                         <ul class="timeline">
                             <li class="time">
@@ -93,7 +117,7 @@
                         </ul>
                     </div>
 
-                    <div class="experience">
+                    <div class="experience" data-aos="fade-up">
                         <h2>Experience</h2>
                         <ul class="timeline">
                             <li class="time">
@@ -121,7 +145,7 @@
 
     </main>
 
-    <footer class="contact">
+    <footer id="contact" data-aos="fade-up" class="contact">
         <h2>Contact</h2>
 
         <div class="social-links">
@@ -148,6 +172,8 @@
 
 
 
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 
     <script src="./js/app.js"></script>

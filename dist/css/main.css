@@ -38,6 +38,8 @@
     background: #efefef;
     list-style: none;
     transform: translate3d(0, -100%, 0);
+    justify-content: space-evenly;
+    font-size: 2rem;
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
@@ -62,10 +64,21 @@
 body {
   height: 100%;
   margin: 0 2rem 5rem 2rem;
-  background: #fcfcfc; }
+  background: #fcfcfc;
+  font-family: "Open Sans", sans-serif; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6 {
+    font-family: "Balsamiq Sans", cursive; }
   body h2 {
     font-size: 2.5rem;
     padding-bottom: 2rem; }
+  body a {
+    text-decoration: none;
+    color: #000; }
 
 header {
   padding: 1rem 0 2rem 0;
@@ -73,7 +86,7 @@ header {
   grid-template-columns: 5% 1fr 1fr 5%;
   align-items: center;
   position: fixed;
-  z-index: 3;
+  z-index: 10;
   width: 100%;
   background: #fcfcfc;
   transform: translateX(-5%); }
@@ -93,6 +106,34 @@ header {
   .works img {
     width: 100%;
     margin-bottom: 1rem; }
+  .works .work {
+    height: 80%; }
+    .works .work .info {
+      position: relative;
+      left: 5%; }
+    .works .work-tag, .works .work-name {
+      z-index: 3;
+      color: black;
+      position: relative; }
+    .works .work-tag {
+      background-color: rgba(252, 252, 252, 0.4);
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      width: max-content;
+      border-radius: 25px; }
+    .works .work-name {
+      font-size: 3rem;
+      font-weight: 900; }
+    .works .work1 .work-tag, .works .work1 .work-name {
+      color: #fcfcfc; }
+    .works .work2 .work-tag, .works .work2 .work-name {
+      color: #fff0f0; }
+    .works .work2 .work-tag {
+      color: #000; }
+    .works .work3 .work-tag, .works .work3 .work-name {
+      color: #000; }
+    .works .work4 .work-tag, .works .work4 .work-name {
+      color: #fcfcfc; }
 
 section {
   padding-top: 7rem; }
@@ -112,7 +153,8 @@ section {
   flex-flow: row wrap; }
   .about .history .studies,
   .about .history .experience {
-    flex: grow; }
+    flex: 1;
+    min-width: 15rem; }
     .about .history .studies .time,
     .about .history .experience .time {
       list-style: none; }
@@ -149,3 +191,35 @@ section {
     transform: rotate(0deg); }
   to {
     transform: rotate(359deg); } }
+
+@media screen and (max-width: 600px) {
+  .menu-btn {
+    margin-right: 10%; }
+  .menu-branding, .menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    .menu-branding.show, .menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 2rem; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
+    .menu-branding .portriat {
+      background: url(../img/chijioke-small.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 130px;
+      height: 130px; }
+  .info {
+    bottom: 40%; }
+    .info .work-name {
+      font-size: 2rem;
+      transform: translateY(-50%); } }
+
+@media screen and (min-width: 600px) {
+  .info {
+    bottom: 45%; } }
